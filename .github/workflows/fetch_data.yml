@@ -1,0 +1,25 @@
+name: Fetch Reddit Stocks Data
+
+on:
+  schedule:
+    - cron: '*/15 * * * *'  # Runs every 15 minutes
+
+jobs:
+  fetchData:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+
+    - name: Fetch Data from API
+      run: |
+        curl -XGET 'https://tradestie.com/api/v1/apps/reddit' > stocks_data.json
+
+    - name: Commit and Push if there are Changes
+      run: |
+        git config --global user.name 'YourGitHubUsername'
+        git config --global user.email 'your-email@example.com'
+        git add stocks_data.json
+        git commit -m "Updated stocks data" || exit 0  # This command will not fail if there's nothing to commit
+        git push
