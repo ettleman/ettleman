@@ -1,9 +1,10 @@
 function fetchStocks() {
-    fetch('https://tradestie.com/api/v1/apps/reddit')
+    fetch('stocks_data.json')
         .then(response => response.json())
         .then(data => displayStocks(data))
         .catch(error => console.error('Error:', error));
 }
+
 
 function displayStocks(stocks) {
     const stocksDiv = document.getElementById('stocks');
