@@ -1,0 +1,137 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #444444;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    width: 30%;
+    margin-left: 5%;
+    max-width: 1200px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: flex-start;
+    padding: 20px;
+    overflow: hidden;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.controls, .image-output {
+    flex: 1;
+    padding: 20px;
+}
+
+.controls {
+    border-right: 0px solid #ddd;
+}
+
+.image-output {
+    overflow-x: auto;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="number"] {
+    width: 50px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+} 
+
+input[type="text"] {
+    width: 100px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+input[type="color"]{
+    width: 50px;
+    height: 40px;
+    padding: 10px;
+    margin-bottom: 2px;
+    border-radius: 1px;
+    border: 1px solid #ddd;
+}
+input[type="file"]{
+    width: 60%;
+}
+
+button {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#zip {
+    background-color: black;
+}
+
+#zip:hover {
+    background-color: #444444;
+}
+
+.create {
+    background-color: #F1F1F1;
+    border-radius: 15px;
+    padding: 15px;
+}
+.applytext {
+    background-color: #F1F1F1;
+    border-radius: 15px;
+    padding: 15px;
+}
+.applyimage {
+    background-color: #F1F1F1;
+    border-radius: 15px;
+    padding: 15px;
+}
+/* ... existing styles ... */
+
+.image-output {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Create four columns */
+    grid-gap: 10px; /* Space between images */
+    overflow-y: auto; /* Vertically scrollable */
+    max-height: 80vh; /* Maximum height of the image container */
+    padding: 10px; /* Optional padding for aesthetics */
+}
+
+#imageContainer canvas {
+    width: 100%; /* Each image takes the full width of its column */
+    height: auto; /* Maintain aspect ratio */
+    border: 1px solid #ddd;
+}
+
+/* ... rest of your styles ... */
+

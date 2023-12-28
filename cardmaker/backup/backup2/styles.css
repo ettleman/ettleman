@@ -1,0 +1,98 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    width: 30%;
+    margin-left: 5%;
+    max-width: 1200px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: flex-start;
+    padding: 20px;
+    overflow: hidden;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.controls, .image-output {
+    flex: 1;
+    padding: 20px;
+}
+
+.controls {
+    border-right: 0px solid #ddd;
+}
+
+.image-output {
+    overflow-x: auto;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="number"] {
+    width: 50px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+} 
+
+input[type="text"] {
+    width: 100px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+input[type="color"]{
+    width: 50px;
+    height: 40px;
+    padding: 10px;
+    margin-bottom: 2px;
+    border-radius: 1px;
+    border: 1px solid #ddd;
+}
+
+button {
+    width: 50px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#imageContainer canvas {
+    max-width: 200px;
+    height: auto;
+    border: 1px solid #ddd;
+}

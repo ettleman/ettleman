@@ -1,0 +1,38 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Editor</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.6.0/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+</head>
+<body>
+    <h1>Batch Image Creator</h1>
+   <div class="controls">
+    <input type="number" id="numImages" placeholder="Number of Images" value="3">
+    <input type="number" id="imgWidth" placeholder="Width" value="500">
+    <input type="number" id="imgHeight" placeholder="Height" value="700">
+    <input type="color" id="bgColor" value="#ffffff">
+    <button onclick="createBatch()">Create Images</button>
+</div>
+<hr>
+        <p style="color: #bbbbbb;">Use "[...]" format (e.g., "[1,2,3]") for unique text per image.</p>
+        
+<div class="controls">
+    <input type="text" id="leftText" placeholder="Left aligned text">
+    <input type="text" id="centerText" placeholder="Center aligned text">
+    <input type="text" id="rightText" placeholder="Right aligned text">
+    <button onclick="applyText()">Apply Text</button>
+    <button onclick="downloadAllImages()">Download All as ZIP</button>
+</div>
+
+<div id="imageContainer"></div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

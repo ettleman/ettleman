@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Batch Create Images</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🖼️</text></svg>">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.6.0/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+
+    <!-- Other head elements -->
+   
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Afacad:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+
+
+</head>
+<body>
+    
+    <div class="stripe">
+  <div class="stripe_inner"></div>
+</div>
+    
+    <div class="container">
+        <div class="controls">
+        <h1 style="margin-top: 0px;">Batch Create Images</h1>
+            <div class="create">
+    #:<input type="number" id="numImages" placeholder="Number of Images" value="4"> <br>
+    <input type="number" id="imgWidth" placeholder="Width" value="1000"> x 
+    <input type="number" id="imgHeight" placeholder="Height" value="1400">px
+    <input type="color" id="bgColor" value="#ffffff">
+    <button onclick="createBatch()">Create Images</button>
+            </div>
+            <br>
+            <div class="applyimage">
+              <input type="file" id="overlayImageInput" multiple accept="image/*"><br>
+    <input style="width: 40%; margin-top: 5px;" type="range" id="imageHeightSlider" min="0" max="100" value="50" onchange="updateSliderValue()">
+    <label for="imageHeightSlider"><span style="width: 40%;" id="sliderValue">50</span>% Height</label>
+    <button onclick="applyOverlayImages()">Apply Overlay Images</button>
+
+               <p style="font-size: 12px; color: #aaaaaa; margin-top: 8px;margin-bottom: 0px;">
+                   Multiple images are applied alphabetically.</p> 
+            </div>
+            <br>
+            
+            <div class="applytext">
+    <input type="color" id="textColor" value="#000000">
+    <!-- <input type="number" id="textSize" placeholder="Text size" value="10"> -->
+                
+    <select id="textSize" placeholder="Text size" value="10">
+                
+      <option value="3">3</option>
+      <option value="5">5</option>
+      <option value="10">10</option>
+      <option value="20">20</option>
+      <option value="30">30</option>
+      <option value="50">50</option>
+                
+    </select>
+                
+    <select id="fontSelector">
+        
+    <option value="Arial">Arial</option>
+    <option value="Verdana">Verdana</option>
+    <option value="Times New Roman">Times New Roman</option>
+    <option value="Roboto">Roboto</option>
+    <option value="Open Sans">Open Sans</option>
+    <option value="Lato">Lato</option>
+    <option value="Kanit">Kanit</option>
+    <option value="Bebas Neue">Bebas Neue</option>
+    <option value="Kanit">Afacad</option>
+        
+    </select>
+    <input type="checkbox" id="boldCheckbox"> Bold
+    <input type="checkbox" id="italicCheckbox"> Italic
+                
+    <input type="text" id="leftText" placeholder="Left text">
+    <input type="text" id="centerText" placeholder="Center text">
+    <input type="text" id="rightText" placeholder="Right text">
+               <p style="font-size: 12px; color: #aaaaaa; margin-top: 0px;">Use [ ] to create an array. eg. [1,2,3]</p> 
+    <button onclick="applyText()">Apply Text</button>
+            </div>
+            
+            
+                
+            <br>
+            <input type="text" id="filenameTitle" placeholder="Enter title">
+    <button id="zip" onclick="downloadAllImages()">Download All as ZIP</button>
+
+</div>
+
+        </div>
+    </div>
+    
+        <div id="imageContainer" class="image-output"></div>
+    <script src="script.js"></script>
+</body>
+</html>

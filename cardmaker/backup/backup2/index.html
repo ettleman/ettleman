@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Text Editor</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.6.0/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="controls">
+    #:<input type="number" id="numImages" placeholder="Number of Images" value="3"> <br>
+    <input type="number" id="imgWidth" placeholder="Width" value="500"> x 
+    <input type="number" id="imgHeight" placeholder="Height" value="700">px
+    <input type="color" id="bgColor" value="#ffffff">
+    <button onclick="createBatch()">Create Images</button>
+
+    <input type="text" id="leftText" placeholder="Left text">
+    <input type="text" id="centerText" placeholder="Center text">
+    <input type="text" id="rightText" placeholder="Right text">
+    <button onclick="applyText()">Apply Text</button>
+    <button onclick="downloadAllImages()">Download All as ZIP</button>
+</div>
+
+        </div>
+        <div id="imageContainer" class="image-output"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

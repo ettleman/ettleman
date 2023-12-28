@@ -1,0 +1,59 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.controls {
+    margin-bottom: 20px;
+}
+
+input[type="number"], input[type="text"], input[type="file"], input[type="color"] {
+    padding: 10px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #1e88e5;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1565c0;
+}
+
+/* ... existing CSS ... */
+
+#imageContainer {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+    max-width: 100%;
+    white-space: nowrap;
+}
+
+#imageContainer canvas {
+    max-height: 200px; /* Adjust as needed */
+    width: auto;
+    border: 1px solid #333;
+}
+
+
+
+hr {
+    width: 80%;
+    border-color: #333;
+    margin-top: 20px;
+}

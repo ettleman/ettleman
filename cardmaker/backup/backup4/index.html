@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Batch Create Images</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.6.0/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="controls">
+        <h1 style="margin-top: 0px;">Batch Create Images</h1>
+            <div class="create">
+    #:<input type="number" id="numImages" placeholder="Number of Images" value="4"> <br>
+    <input type="number" id="imgWidth" placeholder="Width" value="1000"> x 
+    <input type="number" id="imgHeight" placeholder="Height" value="1400">px
+    <input type="color" id="bgColor" value="#ffffff">
+    <button onclick="createBatch()">Create Images</button>
+            </div>
+            <br>
+            <div class="applyimage">
+             <input type="file" id="overlayImageInput" multiple accept="image/*"><br><br>
+    <button onclick="applyOverlayImages()">Apply Overlay Images</button>
+               <p style="font-size: 12px; color: #aaaaaa; margin-top: 0px;margin-bottom: 0px;">Multiple images are applied alphabetically.</p> 
+            </div>
+            <br>
+            <div class="applytext">
+    <input type="text" id="leftText" placeholder="Left text">
+    <input type="text" id="centerText" placeholder="Center text">
+    <input type="text" id="rightText" placeholder="Right text">
+               <p style="font-size: 12px; color: #aaaaaa; margin-top: 0px;">Use [ ] to create an array. eg. [1,2,3]</p> 
+    <button onclick="applyText()">Apply Text</button>
+            </div>
+            
+            
+                
+            <br>
+    <button id="zip" onclick="downloadAllImages()">Download All as ZIP</button>
+
+</div>
+
+        </div>
+        <div id="imageContainer" class="image-output"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

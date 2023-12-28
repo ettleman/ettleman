@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Español Wiki</title>
+    <link href='https://fonts.googleapis.com/css2?family=Livvic&display=swap' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🇪🇸</text></svg>">
+</head>
+<body><br><br>
+    <center>Espanol.wiki</center>
+<div class="mainbox">
+    <div class="buttonarray" id="categoryTabs">
+        <!-- Tabs -->
+        <span class="arraybutton" data-category="Verbs">Verbs</span>
+        <span class="arraybutton" data-category="Nouns">Nouns</span>
+        <span class="arraybutton" data-category="Adjectives">Adjectives</span>
+        <span class="arraybutton" data-category="Adverbs">Adverbs</span>
+        <span class="arraybutton" data-category="Prepositions and Conjunctions">Prepositions and Conjunctions</span>
+        <span class="arraybutton" data-category="Pronouns">Pronouns</span>
+        <span class="arraybutton" data-category="Numbers and Time">Numbers and Time</span>
+        <span class="arraybutton" data-category="Professions">Professions</span>
+    </div>
+    <div class="contentwrap">
+   
+    <center>
+        <div class="grid2">
+            <div class="vertmenu" id="subcategoryList">
+                <!-- Subcategories will be dynamically added here -->
+            </div>
+            
+            <div class="box" id="wordBox">
+                <!-- Word pairs will be displayed here -->
+            </div>
+        </div>
+    </div>
+</div>
+    <div id="popup" style="display: none;">
+    <!-- Conjugation details will be added here -->
+</div>
+
+    <script src="words.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,240 @@
+:root {
+  --stripe-size: 100px;
+  --color1: #aaaaaa;
+  --color2: #313131;
+  --duration: 2s;
+}
+
+.stripe {
+  position: fixed;
+  display: inherit;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+    z-index: -3;
+}
+.stripe_inner {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  font-size: 8rem;
+  text-align: center;
+  font-family: "Anton", sans-serif;
+  color: rgba(255, 255, 255, 0);
+  background: repeating-linear-gradient(45deg, var(--color1) 25%, var(--color1) 50%, var(--color2) 50%, var(--color2) 75%);
+  background-size: var(--stripe-size) var(--stripe-size);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-animation: stripeBackgroundPosition var(--duration) linear infinite;
+          animation: stripeBackgroundPosition var(--duration) linear infinite;
+}
+.stripe::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(100% + var(--stripe-size));
+  height: 100%;
+  background: repeating-linear-gradient(45deg, var(--color2) 25%, var(--color2) 50%, var(--color1) 50%, var(--color1) 75%);
+  background-size: var(--stripe-size) var(--stripe-size);
+  -webkit-animation: stripeTransform var(--duration) linear infinite;
+          animation: stripeTransform var(--duration) linear infinite;
+}
+.stripe::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(ellipse at center, rgba(27, 39, 53, 0) 0%, #090a0f 100%);
+}
+
+@-webkit-keyframes stripeTransform {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(var(--stripe-size) * -1));
+  }
+}
+
+@keyframes stripeTransform {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(var(--stripe-size) * -1));
+  }
+}
+@-webkit-keyframes stripeBackgroundPosition {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: calc(var(--stripe-size) * -1) 0;
+  }
+}
+@keyframes stripeBackgroundPosition {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: calc(var(--stripe-size) * -1) 0;
+  }
+}
+
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #444444;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 450px;
+    max-width: 1200px;
+    margin-left: 5%;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: flex-start;
+    padding: 20px;
+    overflow: hidden;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.controls, .image-output {
+    flex: 1;
+    padding: 20px;
+    flex-direction: column;
+}
+
+.controls {
+    border-right: 0px solid #ddd;
+}
+
+@media only screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    
+    .controls, .image-output {
+        width: 100%;
+    }
+}
+
+
+.image-output {
+    overflow-x: auto;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="number"] {
+    width: 50px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+} 
+
+input[type="text"] {
+    width: 100px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+input[type="color"]{
+    width: 50px;
+    height: 40px;
+    padding: 10px;
+    margin-bottom: 2px;
+    border-radius: 1px;
+    border: 1px solid #ddd;
+}
+input[type="file"]{
+    width: 60%;
+}
+
+button {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#zip {
+    background-color: black;
+}
+
+#zip:hover {
+    background-color: #444444;
+}
+
+.create {
+    background-color: #F1F1F1;
+    border-radius: 15px;
+    padding: 15px;
+}
+.applytext {
+    background-color: #F1F1F1;
+    border-radius: 15px;
+    padding: 15px;
+}
+.applyimage {
+    background-color: #F1F1F1;
+    border-radius: 15px;
+    padding: 15px;
+}
+/* ... existing styles ... */
+
+.image-output {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Create four columns */
+    grid-gap: 10px; /* Space between images */
+    overflow-y: auto; /* Vertically scrollable */
+    max-height: 80vh; /* Maximum height of the image container */
+    padding: 10px; /* Optional padding for aesthetics */
+}
+
+#imageContainer canvas {
+    width: 100%; /* Each image takes the full width of its column */
+    height: auto; /* Maintain aspect ratio */
+    border: 1px solid #ddd;
+}
+
+/* ... rest of your styles ... */
+
