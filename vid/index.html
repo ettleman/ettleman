@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Torrent Streamer</title>
+    <!-- Include WebTorrent library -->
+    <script src="https://cdn.jsdelivr.net/npm/webtorrent@latest/dist/webtorrent.min.js"></script>
+</head>
+<body>
+    <h1>Torrent Video Streamer</h1>
+    <input type="text" id="magnetInput" placeholder="Paste magnet link here">
+    <button onclick="streamTorrent()">Stream Video</button>
+    <video id="videoPlayer" controls></video>
+
+    <script>
+        function streamTorrent() {
+            var magnetLink = document.getElementById('magnetInput').value;
+            var client = new WebTorrent();
+
+            client.add(magnetLink, function (torrent) {
+                // Assuming the torrent contains a single file, stream it.
+                var file = torrent.files.find(function (file) {
+                    return file.name.endsWith('.mp4'); // You can check for other video formats as well
+                });
+
+                // Stream the file in the browser
+                file.renderTo('video#videoPlayer');
+            });
+        }
+    </script>
+</body>
+</html>
