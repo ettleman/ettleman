@@ -4,14 +4,29 @@
     <title>Torrent Streamer</title>
 </head>
 <body>
+    
+    <h1>WebTorrent Test</h1>
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            if (WebTorrent) {
+                console.log("WebTorrent is loaded");
+            } else {
+                console.log("WebTorrent is not loaded");
+            }
+        });
+    </script>
+    
+    
+    
     <h1>Torrent Video Streamer</h1>
     <input type="text" id="magnetInput" placeholder="Paste magnet link here">
     <button onclick="streamTorrent()">Stream Video</button>
     <video id="videoPlayer" controls></video>
 
     <!-- Make sure this path is correct -->
-    <script src="webtorrent.min.js"></script>
+    <script src="webtorrent.min.js" type="text/javascript"></script>
 
+    
     <script>
         function streamTorrent() {
             var magnetLink = document.getElementById('magnetInput').value;
