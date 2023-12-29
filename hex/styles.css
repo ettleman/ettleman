@@ -1,0 +1,98 @@
+@keyframes colorCycle {
+    0%   { background-color: red; }
+    16%  { background-color: yellow; }
+    33%  { background-color: green; }
+    50%  { background-color: cyan; }
+    67%  { background-color: blue; }
+    84%  { background-color: magenta; }
+    100% { background-color: red; }
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1f1f1f;
+    color: #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    animation: colorCycle 15s infinite; /* Adjust the duration (15s here) as needed */
+}
+
+.container {
+    background: #2c2c2c;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 500px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+h1, h3 {
+    color: #e0e0e0;
+    text-align: center;
+}
+
+.color-text span {
+    font-weight: bold;
+}
+
+button {
+    background-color: #555;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+button:hover {
+    background-color: #777;
+}
+
+#results, #history {
+    margin-top: 20px;
+}
+
+#gradient {
+    width: 100%;
+    height: 30px;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+input[type="color"] {
+    display: block;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    padding: 5px;
+    border-bottom: 1px solid #444;
+}
+
+li:last-child {
+    border-bottom: none;
+}
+
+randomHex {
+    font-size: 40px;
+    justify-content: center;
+    align-items: center;
+}
