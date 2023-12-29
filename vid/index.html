@@ -2,9 +2,6 @@
 <html>
 <head>
     <title>Torrent Streamer</title>
-    <!-- Include WebTorrent library -->
-    <script src="js/webtorrent.min.js"></script>
-
 </head>
 <body>
     <h1>Torrent Video Streamer</h1>
@@ -12,15 +9,17 @@
     <button onclick="streamTorrent()">Stream Video</button>
     <video id="videoPlayer" controls></video>
 
+    <!-- Make sure this path is correct -->
+    <script src="webtorrent.min.js"></script>
+
     <script>
         function streamTorrent() {
             var magnetLink = document.getElementById('magnetInput').value;
             var client = new WebTorrent();
 
             client.add(magnetLink, function (torrent) {
-                // Assuming the torrent contains a single file, stream it.
                 var file = torrent.files.find(function (file) {
-                    return file.name.endsWith('.mp4'); // You can check for other video formats as well
+                    return file.name.endsWith('.mp4'); // Check for video file
                 });
 
                 // Stream the file in the browser
