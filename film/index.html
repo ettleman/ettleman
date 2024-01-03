@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Film Budget Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Include Dragula CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dragula/3.7.2/dragula.min.css" />
+</head>
+<body>
+    <h1>Film Budget Calculator</h1>
+    # of Shoot Days:
+    <input value="4" type="number" id="shootDays" placeholder="">
+    <button onclick="createColumns()">Create Columns</button>
+    <button onclick="exportToCSV()">Export to CSV</button>
+
+    <div id="shootDayColumns"></div>
+    <h2>Total Budget: $<span id="totalBudget">0</span></h2>
+<div id="typeTotals"></div>
+
+    <!-- Include Dragula JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dragula/3.7.2/dragula.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

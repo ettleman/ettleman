@@ -1,0 +1,132 @@
+body, button, #congratsPopup {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.game-container {
+    text-align: center;
+}
+
+/*
+.content {
+    height: 500px;
+    overflow-y: scroll;
+    margin: 20px 0;
+    border: 1px solid #ddd;
+    padding: 20px;
+    text-align: left;
+}
+*/
+
+#content {
+    /* Add additional styles if needed to center the content */
+    margin: auto;
+    width: 75%; /* Adjust width as needed */
+    font-size: 16px; /* Adjust base font size as needed */
+}
+
+#content h1, #content h2, #content h3, #content h4, #content h5, #content h6 {
+    /* Make titles larger */
+    font-size: 1.5em;
+}
+
+.popup-content {
+}
+
+/* Initial link color */
+a {
+    color: blue;
+}
+.heat-meter {
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+/* ... Existing CSS ... */
+
+#clickCounter {
+    /* Styling for the click counter */
+}
+
+/* ... Existing styles ... */
+
+/* ... existing styles ... */
+
+/* Style for popup */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100; /* High z-index to be on top */
+}
+
+.popup-content {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.close-btn {
+    float: right;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* ... additional styles ... */
+
+
+/* Fixed header bar */
+#headerBar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 24px;
+    z-index: 10;
+}
+
+/* Fixed UI box for heat meter, button, and click counter */
+#uiBox {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 10px;
+    z-index: 5;
+}
+
+/* Style for the current page title within the UI box */
+#currentTitle {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+/* Apply Open Sans font */
+body, button, #congratsPopup {
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Rest of the styles */
+/* ... */
