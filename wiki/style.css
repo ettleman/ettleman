@@ -1,6 +1,4 @@
-body, button, #congratsPopup {
-    font-family: 'Open Sans', sans-serif;
-}
+body, button, #congratsPopup { font-family: 'Open Sans', sans-serif; }
 
 .game-container {
     text-align: center;
@@ -106,22 +104,37 @@ button:hover {
     z-index: 10;
 }
 
-/* Fixed UI box for heat meter, button, and click counter */
+/* Fixed UI box for heat meter,  button, and click counter */
 #uiBox {
     position: fixed;
-    bottom: 10px;
-    left: 10px;
-    background-color: white;
-    border: 1px solid #ddd;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f8f9fa;
+    border-top: 1px solid #ddd;
     padding: 10px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     z-index: 5;
 }
 
-/* Style for the current page title within the UI box */
 #currentTitle {
-    font-size: 20px;
-    margin-bottom: 10px;
+    font-size: 24px; /* Larger font size for the title */
+    font-weight: bold;
+    flex-grow: 1;
+    text-align: center;
+    visibility: hidden; /* Title is hidden initially */
 }
+
+/* Style for the heat value and click counter */
+#heatValue, #clickCounter {
+    margin: 0 15px;
+}
+
+/* ... rest of the style.css ... */
+
 
 /* Apply Open Sans font */
 body, button, #congratsPopup {

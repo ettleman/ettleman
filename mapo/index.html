@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Map App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
+</head>
+<body>
+    <div id="mapid"></div>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script>
+        var mymap = L.map('mapid').setView([48.8584, 2.2945], 13);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(mymap);
+
+        var addMarkerMode = false;
+
+        L.Control.AddMarker = L.Control.extend({
+            onAdd: function(map) {
+                var button = L.DomUtil.create('button', 'leaflet-bar leaflet-control leaflet-control-custom');
+                button.innerHTML = 'Add Marker';
+                button.onclick = function(){
+                    addMarkerMode = !addMarkerMode;
+                    button.innerHTML = addMarkerMode ? 'Cancel' : 'Add Marker';
+                }
+                return button;
+            }
+        });
+
+        new L.Control.AddMarker({ position: 'topleft' }).addTo(mymap);
+
+        var currentMarker = null;
+
+        mymap.on('click', function(e) {
+            if (addMarkerMode) {
+                var customIcon = L.divIcon({
+                    className: 'custom-icon',
+                    html: '<div class="custom-marker"></div>',
+                    iconSize: [20, 20]
+                });
+
+                var newMarker = L.marker(e.latlng, {icon: customIcon}).addTo(mymap);
+
+                var popupContent = '<textarea id="textAreaPopup" style="width:200px; height:100px;"></textarea><br><button onclick="saveText(newMarker)">Save</button><button onclick="deleteMarker(newMarker)">Delete</button>';
+                newMarker.bindPopup(popupContent).openPopup();
+
+                currentMarker = newMarker;
+            }
+        });
+
+        function saveText(marker) {
+    var textAreaValue = document.getElementById('textAreaPopup').value;
+            var customIcon = L.divIcon({
+                className: 'custom-icon',
+                html: '<div class="custom-marker">' + textAreaValue + '</div>',
+                iconSize: [20, 20]
+            });
+    currentMarker.setIcon(customIcon);
+}
+
+function deleteMarker() {
+    mymap.removeLayer(currentMarker);
+}
+
+window.saveText = saveText; 
+window.deleteMarker = deleteMarker; 
+    </script>
+</body>
+</html>

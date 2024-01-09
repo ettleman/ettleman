@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Runaway Circle</title>
+    <style>
+        #circle {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div id="circle"></div>
+
+<script>
+        var circles = [];
+        var boxSize = { width: 20, height: 2 };
+        var velocities = [];
+        var speed = 50;
+
+        for (var i = 0; i < 1000; i++) {
+            var circle = document.createElement('div');
+            circle.style.position = 'absolute';
+            circle.style.width = boxSize.width + 'px';
+            circle.style.height = boxSize.height + 'px';
+            circle.style.backgroundColor = 'red';
+            circle.style.borderRadius = '4%';
+            circle.style.left = Math.random() * window.innerWidth + 'px';
+            circle.style.top = Math.random() * window.innerHeight + 'px';
+            document.body.appendChild(circle);
+            circles.push(circle);
+            velocities.push({ x: 0, y: 0 });
+        }
+
+        document.addEventListener('mousemove', function(e) {
+            for (var i = 0; i < circles.length; i++) {
+                var circle = circles[i];
+                var dx = e.clientX - circle.offsetLeft - boxSize.width / 2;
+                var dy = e.clientY - circle.offsetTop - boxSize.height / 2;
+                var distance = Math.sqrt(dx * dx + dy * dy);
+
+                if (distance < 100) {
+                    velocities[i].x = dx / distance;
+                    velocities[i].y = dy / distance;
+
+                    circle.style.left = (circle.offsetLeft - velocities[i].x * speed) + 'px';
+                    circle.style.top = (circle.offsetTop - velocities[i].y * speed) + 'px';
+                }
+            }
+        });
+    </script>
+</body>
+</html>
