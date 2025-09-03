@@ -159,6 +159,13 @@
         
           <li>
             
+                ^apps/stockmarket/get-options-data-for-bar-chart/(?P&lt;ticker&gt;[A-Z]+)/$
+                [name='get_options_data_for_bar_chart']
+            
+          </li>
+        
+          <li>
+            
                 apps/stockmarket/(?P&lt;username&gt;[a-zA-Z0-9\-_]+)/my-public-watchlists/$
                 [name='show_my_public_watchlists']
             
