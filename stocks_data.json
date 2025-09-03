@@ -131,6 +131,34 @@
         
           <li>
             
+                apps/fundamental/stock-highlights/$
+                [name='show_stock_fundamental_highlights']
+            
+          </li>
+        
+          <li>
+            
+                ^apps/stockmarket/get-stock-price-jsondata/(?P&lt;ticker&gt;[A-Z\_]+)/
+                [name='get_stock_price_jsondata']
+            
+          </li>
+        
+          <li>
+            
+                ^apps/stockmarket/get-cmf-data-for-linechart/(?P&lt;ticker&gt;[A-Z\_]+)-cmf/
+                [name='get_cmf_data_for_linechart']
+            
+          </li>
+        
+          <li>
+            
+                apps/stockmarket/get-stock-analyst-target/$
+                [name='get_stock_analyst_target']
+            
+          </li>
+        
+          <li>
+            
                 apps/stockmarket/(?P&lt;username&gt;[a-zA-Z0-9\-_]+)/my-public-watchlists/$
                 [name='show_my_public_watchlists']
             
