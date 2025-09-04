@@ -152,6 +152,13 @@
         
           <li>
             
+                ^apps/stockmarket/get-indicator-data-for-linechart/(?P&lt;ticker&gt;[A-Z\_]+)/(?P&lt;indicator&gt;[a-zA-Z0-9_]+)/
+                [name='get_indicator_data_for_linechart']
+            
+          </li>
+        
+          <li>
+            
                 apps/stockmarket/get-stock-analyst-target/$
                 [name='get_stock_analyst_target']
             
