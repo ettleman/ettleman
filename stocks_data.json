@@ -1,533 +1,430 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <title>Page not found at /api/v1/apps/reddit</title>
-  <meta name="robots" content="NONE,NOARCHIVE">
-  <style type="text/css">
-    html * { padding:0; margin:0; }
-    body * { padding:10px 20px; }
-    body * * { padding:0; }
-    body { font:small sans-serif; background:#eee; color:#000; }
-    body>div { border-bottom:1px solid #ddd; }
-    h1 { font-weight:normal; margin-bottom:.4em; }
-    h1 span { font-size:60%; color:#666; font-weight:normal; }
-    table { border:none; border-collapse: collapse; width:100%; }
-    td, th { vertical-align:top; padding:2px 3px; }
-    th { width:12em; text-align:right; color:#666; padding-right:.5em; }
-    #info { background:#f6f6f6; }
-    #info ol { margin: 0.5em 4em; }
-    #info ol li { font-family: monospace; }
-    #summary { background: #ffc; }
-    #explanation { background:#eee; border-bottom: 0px none; }
-  </style>
-</head>
-<body>
-  <div id="summary">
-    <h1>Page not found <span>(404)</span></h1>
-    <table class="meta">
-      <tr>
-        <th>Request Method:</th>
-        <td>GET</td>
-      </tr>
-      <tr>
-        <th>Request URL:</th>
-        <td>http://tradestie.com/api/v1/apps/reddit</td>
-      </tr>
-      
-    </table>
-  </div>
-  <div id="info">
-    
-      <p>
-      Using the URLconf defined in <code>reddit_dashboard.urls</code>,
-      Django tried these URL patterns, in this order:
-      </p>
-      <ol>
-        
-          <li>
-            
-                admin/
-                
-            
-          </li>
-        
-          <li>
-            
-                ^$
-                [name='home']
-            
-          </li>
-        
-          <li>
-            
-                accounts/
-                
-            
-          </li>
-        
-          <li>
-            
-                apps/logout/
-                
-            
-          </li>
-        
-          <li>
-            
-                ^apps/login/$
-                [name='show_login_page']
-            
-          </li>
-        
-          <li>
-            
-                apps/stockmarket/make-watchlist-public/$
-                [name='make_watchlist_public']
-            
-          </li>
-        
-          <li>
-            
-                apps/stockmarket/fetch-random-dashboards-list/$
-                [name='show_random_community_dashboards']
-            
-          </li>
-        
-          <li>
-            
-                ^apps/stockmarket/get-stock-price-ma-jsondata/(?P&lt;ticker&gt;[A-Z]+)/
-                [name='get_stock_price_ma_jsondata']
-            
-          </li>
-        
-          <li>
-            
-                apps/stockmarket/get-top-reddit-comments/$
-                [name='get_top_reddit_comments']
-            
-          </li>
-        
-          <li>
-            
-                apps/stockmarket/get-top-twitter-comments/$
-                [name='get_top_twitter_comments']
-            
-          </li>
-        
-          <li>
-            
-                apps/stockmarket/get-top-stocktwits-comments/$
-                [name='get_top_stocktwits_comments']
-            
-          </li>
-        
-          <li>
-            
-                apps/stockmarket/get-top-twitter-comments-from-influencers-fora-watchlist/$
-                [name='get_top_twitter_comments_from_influencers_fora_watchlist']
-            
-          </li>
-        
-          <li>
-            
-                apps/fundamental/stock-highlights/$
-                [name='show_stock_fundamental_highlights']
-            
-          </li>
-        
-          <li>
-            
-                ^apps/stockmarket/get-stock-price-jsondata/(?P&lt;ticker&gt;[A-Z\_]+)/
-                [name='get_stock_price_jsondata']
-            
-          </li>
-        
-          <li>
-            
-                ^apps/stockmarket/get-cmf-data-for-linechart/(?P&lt;ticker&gt;[A-Z\_]+)-cmf/
-                [name='get_cmf_data_for_linechart']
-            
-          </li>
-        
-          <li>
-            
-                ^apps/stockmarket/get-indicator-data-for-linechart/(?P&lt;ticker&gt;[A-Z\_]+)/(?P&lt;indicator&gt;[a-zA-Z0-9_]+)/
-                [name='get_indicator_data_for_linechart']
-            
-          </li>
-        
-          <li>
-            
-                apps/stockmarket/get-stock-analyst-target/$
-                [name='get_stock_analyst_target']
-            
-          </li>
-        
-          <li>
-            
-                ^apps/stockmarket/get-options-data-for-bar-chart/(?P&lt;ticker&gt;[A-Z]+)/$
-                [name='get_options_data_for_bar_chart']
-            
-          </li>
-        
-          <li>
-            
-                ^apps/user/get-options-changeinoi-daily-for-bar-chart/$
-                [name='get_options_changeinoi_daily_for_bar_chart']
-            
-          </li>
-        
-          <li>
-            
-                apps/stockmarket/(?P&lt;username&gt;[a-zA-Z0-9\-_]+)/my-public-watchlists/$
-                [name='show_my_public_watchlists']
-            
-          </li>
-        
-          <li>
-            
-                apps/stockmarket/fetch-stock-data/
-                [name='fetch_stock_data']
-            
-          </li>
-        
-          <li>
-            
-                apps/stockmarket/fetch-option-data/(?P&lt;username&gt;[a-zA-Z0-9\-_]+)/(?P&lt;watchlist&gt;[a-zA-Z0-9\-_]+)/imo/$
-                [name='fetch_stock_imo_option_data']
-            
-          </li>
-        
-          <li>
-            
-                apps/stockmarket/fetch-option-data/(?P&lt;username&gt;[a-zA-Z0-9\-_]+)/(?P&lt;watchlist&gt;[a-zA-Z0-9\-_]+)/omo/$
-                [name='fetch_stock_omo_option_data']
-            
-          </li>
-        
-          <li>
-            
-                apps/stockmarket/fetch-watchlist-socialdata/(?P&lt;username&gt;[a-zA-Z0-9\-_]+)/(?P&lt;watchlist&gt;[a-zA-Z0-9\-_]+)/$
-                [name='get_watchlist_social_stats']
-            
-          </li>
-        
-          <li>
-            
-                apps/stockmarket/remove-stock-from-watchlist/(?P&lt;ticker&gt;[a-zA-Z0-9\-_]+)/(?P&lt;watchlist&gt;[a-zA-Z0-9\-_]+)/$
-                [name='remove_stock_from_watchlist']
-            
-          </li>
-        
-          <li>
-            
-                apps/stockmarket/remove-watchlist/(?P&lt;watchlist&gt;[a-zA-Z0-9\-_]+)/$
-                [name='remove_watchlist']
-            
-          </li>
-        
-          <li>
-            
-                apps/stockmarket/get-om-options-data-for-bar-chart/(?P&lt;ticker&gt;[a-zA-Z0-9\-_]+)/$
-                [name='get_om_options_data_for_bar_chart']
-            
-          </li>
-        
-          <li>
-            
-                apps/stockmarket/get-im-options-data-for-bar-chart/(?P&lt;ticker&gt;[a-zA-Z0-9\-_]+)/$
-                [name='get_im_options_data_for_bar_chart']
-            
-          </li>
-        
-          <li>
-            
-                apps/stockmarket/add-stockto-watchlist/
-                [name='add_stockto_watchlist']
-            
-          </li>
-        
-          <li>
-            
-                apps/stockmarket/(?P&lt;username&gt;[a-zA-Z0-9\-_]+)/(?P&lt;watchlist&gt;[a-zA-Z0-9\-_]+)/$
-                [name='show_stocks_from_watchlist']
-            
-          </li>
-        
-          <li>
-            
-                apps/user/(?P&lt;username&gt;[a-zA-Z0-9\-_]+)/dashboards/$
-                [name='home']
-            
-          </li>
-        
-          <li>
-            
-                apps/user/(?P&lt;username&gt;[a-zA-Z0-9\-_]+)/build-dashboard/$
-                [name='home']
-            
-          </li>
-        
-          <li>
-            
-                sitemap/(?P&lt;page_no&gt;[0-9]+)/
-                [name='sitemap']
-            
-          </li>
-        
-          <li>
-            
-                apps/crypto/top-trending-cryptocurrencies/
-                [name='top_coingeko_trending']
-            
-          </li>
-        
-          <li>
-            
-                apps/reddit/wallstreetbets/
-                [name='MainPage']
-            
-          </li>
-        
-          <li>
-            
-                apps/stockmarket/movers/
-                [name='overview']
-            
-          </li>
-        
-          <li>
-            
-                apps/stockmarket/stock-gainers/
-                [name='stock_gainers']
-            
-          </li>
-        
-          <li>
-            
-                apps/stockmarket/stock-losers/
-                [name='stock_losers']
-            
-          </li>
-        
-          <li>
-            
-                apps/stockmarket/stock-sma-10-crossed-20-crossed-30/
-                [name='get_stocks_sma_10_crossed_20_crossed_30']
-            
-          </li>
-        
-          <li>
-            
-                apps/stockmarket/stocks-above-10-but-below-20-and-30-ma/
-                [name='sma_above_10_but_below_20_30']
-            
-          </li>
-        
-          <li>
-            
-                apps/stockmarket/(?P&lt;ticker&gt;[A-Z]+)-moving-averages/
-                [name='get_stocks_ma']
-            
-          </li>
-        
-          <li>
-            
-                apps/stockmarket/twitter-stocks/
-                [name='get_twitter_stocks']
-            
-          </li>
-        
-          <li>
-            
-                apps/reddit/penny-stocks/
-                [name='pennystocks']
-            
-          </li>
-        
-          <li>
-            
-                apps/stock-twits/most-discussed-stocks/
-                [name='stockTwits']
-            
-          </li>
-        
-          <li>
-            
-                apps/twitter/most-active-stocks/
-                [name='Twitter']
-            
-          </li>
-        
-          <li>
-            
-                apps/twitter/gettoptraders-info
-                [name='GetTwittertoptradersInfo']
-            
-          </li>
-        
-          <li>
-            
-                apps/reddit/api/
-                [name='RedditApi']
-            
-          </li>
-        
-          <li>
-            
-                apps/reddit/top-crypto-subreddits/
-                [name='top_crypto_subreddits']
-            
-          </li>
-        
-          <li>
-            
-                apps/options/top-etf-options-by-open-interest/
-                [name='options_td_unusual_optionsoi']
-            
-          </li>
-        
-          <li>
-            
-                apps/options/most-active-us-etf-options-by-volume/
-                [name='options_td_unusual_options_volume']
-            
-          </li>
-        
-          <li>
-            
-                ^apps/etf/(?P&lt;etf&gt;[a-z\-]+)/
-                [name='etfdata']
-            
-          </li>
-        
-          <li>
-            
-                ^apps/stackoverflow/top-(?P&lt;tag&gt;[a-z\-]+)-questions/
-                [name='top_stackoverflow_questions']
-            
-          </li>
-        
-          <li>
-            
-                apps/stockmarket/stock-sma-10-crossed-20-crossed-30/
-                [name='get_stocks_sma_10_crossed_20_crossed_30']
-            
-          </li>
-        
-          <li>
-            
-                apps/stockmarket/stocks-above-10-but-below-20-and-30-ma/
-                [name='sma_above_10_but_below_20_30']
-            
-          </li>
-        
-          <li>
-            
-                apps/stockmarket/stocks-above-and-below-20-day-price/
-                [name='stocks_above_and_below_20_day_price']
-            
-          </li>
-        
-          <li>
-            
-                apps/stockmarket/(?P&lt;ticker&gt;[A-Z]+)-analysis/
-                [name='get_stocks_ma']
-            
-          </li>
-        
-          <li>
-            
-                apps/search/$
-                [name='get_stocks_ma']
-            
-          </li>
-        
-          <li>
-            
-                apps/stockmarket/save-option-data-to-track/$
-                [name='save_option_data_to_track']
-            
-          </li>
-        
-          <li>
-            
-                apps/stockmarket/get-correlated-stocks-for-astock/
-                [name='get_correlated_stocks_for_astock']
-            
-          </li>
-        
-          <li>
-            
-                apps/stockmarket/fetch-stockanalysis-option-data/
-                [name='fetch_stockanalysis_option_data']
-            
-          </li>
-        
-          <li>
-            
-                ^apps/stockmarket/fetch-stockanalysis-option-oi-data-forastrike/
-                [name='fetch_stockanalysis_option_oi_data_forastrike']
-            
-          </li>
-        
-          <li>
-            
-                apps/indicators/stocks-candlestick-patterns/
-                [name='stock_cdl_patterns']
-            
-          </li>
-        
-          <li>
-            
-                apps/indicators/(?P&lt;cdl_pattern&gt;[0-9a-z\-]+)/
-                [name='get_stocks_with_cdl_patterns']
-            
-          </li>
-        
-          <li>
-            
-                apps/options_dashboard/
-                
-            
-          </li>
-        
-          <li>
-            
-                ^apps/filter/
-                
-            
-          </li>
-        
-          <li>
-            
-                ^api/stock-filter/
-                
-            
-          </li>
-        
-          <li>
-            
-                apps/investment-advisor/
-                
-            
-          </li>
-        
-      </ol>
-      <p>
-        
-        The current path, <code>api/v1/apps/reddit</code>, didn't match any of these.
-      </p>
-    
-  </div>
 
-  <div id="explanation">
-    <p>
-      You're seeing this error because you have <code>DEBUG = True</code> in
-      your Django settings file. Change that to <code>False</code>, and Django
-      will display a standard 404 page.
-    </p>
-  </div>
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>SB Admin 2 - 404</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+            <!-- Sidebar - Brand -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+                <div class="sidebar-brand-icon rotate-n-15">
+                    <i class="fas fa-laugh-wink"></i>
+                </div>
+                <div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
+            </a>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+            <!-- Nav Item - Dashboard -->
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+            <!-- Heading -->
+            <div class="sidebar-heading">
+                Interface
+            </div>
+
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
+                    aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="fas fa-fw fa-cog"></i>
+                    <span>Components</span>
+                </a>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Custom Components:</h6>
+                        <a class="collapse-item" href="buttons.html">Buttons</a>
+                        <a class="collapse-item" href="cards.html">Cards</a>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Nav Item - Utilities Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
+                    aria-expanded="true" aria-controls="collapseUtilities">
+                    <i class="fas fa-fw fa-wrench"></i>
+                    <span>Utilities</span>
+                </a>
+                <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
+                    data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Custom Utilities:</h6>
+                        <a class="collapse-item" href="utilities-color.html">Colors</a>
+                        <a class="collapse-item" href="utilities-border.html">Borders</a>
+                        <a class="collapse-item" href="utilities-animation.html">Animations</a>
+                        <a class="collapse-item" href="utilities-other.html">Other</a>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+            <!-- Heading -->
+            <div class="sidebar-heading">
+                Addons
+            </div>
+
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item active">
+                <a class="nav-link" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true"
+                    aria-controls="collapsePages">
+                    <i class="fas fa-fw fa-folder"></i>
+                    <span>Pages</span>
+                </a>
+                <div id="collapsePages" class="collapse show" aria-labelledby="headingPages"
+                    data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Login Screens:</h6>
+                        <a class="collapse-item" href="login.html">Login</a>
+                        <a class="collapse-item" href="register.html">Register</a>
+                        <a class="collapse-item" href="forgot-password.html">Forgot Password</a>
+                        <div class="collapse-divider"></div>
+                        <h6 class="collapse-header">Other Pages:</h6>
+                        <a class="collapse-item active" href="404.html">404 Page</a>
+                        <a class="collapse-item" href="blank.html">Blank Page</a>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Nav Item - Charts -->
+            <li class="nav-item">
+                <a class="nav-link" href="charts.html">
+                    <i class="fas fa-fw fa-chart-area"></i>
+                    <span>Charts</span></a>
+            </li>
+
+            <!-- Nav Item - Tables -->
+            <li class="nav-item">
+                <a class="nav-link" href="tables.html">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Tables</span></a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider d-none d-md-block">
+
+            <!-- Sidebar Toggler (Sidebar) -->
+            <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
+
+        </ul>
+        <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+                    <!-- Sidebar Toggle (Topbar) -->
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+                    <!-- Topbar Search -->
+                    <form
+                        class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+                        <div class="input-group">
+                            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
+                                aria-label="Search" aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                                <button class="btn btn-primary" type="button">
+                                    <i class="fas fa-search fa-sm"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+
+                    <!-- Topbar Navbar -->
+                    <ul class="navbar-nav ml-auto">
+
+                        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+                        <li class="nav-item dropdown no-arrow d-sm-none">
+                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-search fa-fw"></i>
+                            </a>
+                            <!-- Dropdown - Messages -->
+                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+                                aria-labelledby="searchDropdown">
+                                <form class="form-inline mr-auto w-100 navbar-search">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control bg-light border-0 small"
+                                            placeholder="Search for..." aria-label="Search"
+                                            aria-describedby="basic-addon2">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-primary" type="button">
+                                                <i class="fas fa-search fa-sm"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </li>
+
+                        <!-- Nav Item - Alerts -->
+                        <li class="nav-item dropdown no-arrow mx-1">
+                            <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-bell fa-fw"></i>
+                                <!-- Counter - Alerts -->
+                                <span class="badge badge-danger badge-counter">3+</span>
+                            </a>
+                            <!-- Dropdown - Alerts -->
+                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="alertsDropdown">
+                                <h6 class="dropdown-header">
+                                    Alerts Center
+                                </h6>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="mr-3">
+                                        <div class="icon-circle bg-primary">
+                                            <i class="fas fa-file-alt text-white"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="small text-gray-500">December 12, 2019</div>
+                                        <span class="font-weight-bold">A new monthly report is ready to download!</span>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="mr-3">
+                                        <div class="icon-circle bg-success">
+                                            <i class="fas fa-donate text-white"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="small text-gray-500">December 7, 2019</div>
+                                        $290.29 has been deposited into your account!
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="mr-3">
+                                        <div class="icon-circle bg-warning">
+                                            <i class="fas fa-exclamation-triangle text-white"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="small text-gray-500">December 2, 2019</div>
+                                        Spending Alert: We've noticed unusually high spending for your account.
+                                    </div>
+                                </a>
+                                <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
+                            </div>
+                        </li>
+
+                        <!-- Nav Item - Messages -->
+                        <li class="nav-item dropdown no-arrow mx-1">
+                            <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-envelope fa-fw"></i>
+                                <!-- Counter - Messages -->
+                                <span class="badge badge-danger badge-counter">7</span>
+                            </a>
+                            <!-- Dropdown - Messages -->
+                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="messagesDropdown">
+                                <h6 class="dropdown-header">
+                                    Message Center
+                                </h6>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="dropdown-list-image mr-3">
+                                        <img class="rounded-circle" src="img/undraw_profile_1.svg"
+                                            alt="">
+                                        <div class="status-indicator bg-success"></div>
+                                    </div>
+                                    <div class="font-weight-bold">
+                                        <div class="text-truncate">Hi there! I am wondering if you can help me with a
+                                            problem I've been having.</div>
+                                        <div class="small text-gray-500">Emily Fowler · 58m</div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="dropdown-list-image mr-3">
+                                        <img class="rounded-circle" src="img/undraw_profile_2.svg"
+                                            alt="">
+                                        <div class="status-indicator"></div>
+                                    </div>
+                                    <div>
+                                        <div class="text-truncate">I have the photos that you ordered last month, how
+                                            would you like them sent to you?</div>
+                                        <div class="small text-gray-500">Jae Chun · 1d</div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="dropdown-list-image mr-3">
+                                        <img class="rounded-circle" src="img/undraw_profile_3.svg"
+                                            alt="">
+                                        <div class="status-indicator bg-warning"></div>
+                                    </div>
+                                    <div>
+                                        <div class="text-truncate">Last month's report looks great, I am very happy with
+                                            the progress so far, keep up the good work!</div>
+                                        <div class="small text-gray-500">Morgan Alvarez · 2d</div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="dropdown-list-image mr-3">
+                                        <img class="rounded-circle" src="https://source.unsplash.com/Mv9hjnEUHR4/60x60"
+                                            alt="">
+                                        <div class="status-indicator bg-success"></div>
+                                    </div>
+                                    <div>
+                                        <div class="text-truncate">Am I a good boy? The reason I ask is because someone
+                                            told me that people say this to all dogs, even if they aren't good...</div>
+                                        <div class="small text-gray-500">Chicken the Dog · 2w</div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item text-center small text-gray-500" href="#">Read More Messages</a>
+                            </div>
+                        </li>
+
+                        <div class="topbar-divider d-none d-sm-block"></div>
+
+                        <!-- Nav Item - User Information -->
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
+                                <img class="img-profile rounded-circle"
+                                    src="img/undraw_profile.svg">
+                            </a>
+                            <!-- Dropdown - User Information -->
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="userDropdown">
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Profile
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Settings
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Activity Log
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Logout
+                                </a>
+                            </div>
+                        </li>
+
+                    </ul>
+
+                </nav>
+                <!-- End of Topbar -->
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+
+                    <!-- 404 Error Text -->
+                    <div class="text-center">
+                        <div class="error mx-auto" data-text="404">404</div>
+                        <p class="lead text-gray-800 mb-5">Page Not Found</p>
+                        <p class="text-gray-500 mb-0">It looks like you found a glitch in the matrix...</p>
+                        <a href="index.html">&larr; Back to Dashboard</a>
+                    </div>
+
+                </div>
+                <!-- /.container-fluid -->
+
+            </div>
+            <!-- End of Main Content -->
+
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright &copy; Your Website 2020</span>
+                    </div>
+                </div>
+            </footer>
+            <!-- End of Footer -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-primary" href="login.html">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
+
 </body>
+
 </html>
