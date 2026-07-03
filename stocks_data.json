@@ -562,6 +562,11 @@
             margin-bottom: 0;
         }
         
+        /* Feedback button - desktop only */
+        @media (min-width: 768px) {
+            #feedbackFloatingBtn { display: flex !important; }
+        }
+
         /* Sidebar for desktop */
         @media (min-width: 768px) {
             .sidebar {
@@ -2007,6 +2012,28 @@
                         </a>
                     </li>
 
+                    <!-- Free Tools -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="freeToolsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-wrench d-lg-none"></i>
+                            <span>Free Tools</span>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="freeToolsDropdown">
+                            <li><a class="dropdown-item" href="/tools/semiconductor-supply-chain/">
+                                <i class="fas fa-microchip me-2"></i>Semiconductor Supply Chain
+                            </a></li>
+                            <li><a class="dropdown-item" href="/tools/gamma-squeeze-scanner/">
+                                <i class="fas fa-bolt me-2"></i>Gamma Squeeze Scanner
+                            </a></li>
+                            <li><a class="dropdown-item" href="/tools/sector-rotation/">
+                                <i class="fas fa-sync-alt me-2"></i>Sector Rotation Tracker
+                            </a></li>
+                            <li><a class="dropdown-item" href="/tools/reddit-sentiment/">
+                                <i class="fab fa-reddit me-2"></i>Reddit Sentiment
+                            </a></li>
+                        </ul>
+                    </li>
+
                     <!-- APIs -->
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="apisDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -2792,7 +2819,7 @@
         </div>
         <div class="mt-4">
             <p class="text-muted small">
-                If you believe this is an error, please <a href="/cdn-cgi/l/email-protection#c0b3b5b0b0afb2b480b4b2a1a4a5b3b4a9a5eea3afad">contact support</a>.
+                If you believe this is an error, please <a href="/cdn-cgi/l/email-protection#0a797f7a7a65787e4a7e786b6e6f797e636f24696567">contact support</a>.
             </p>
         </div>
     </div>
@@ -3054,7 +3081,7 @@
     </script>
 
     <!-- Site-wide Feedback Button (Desktop Only) -->
-    <button id="feedbackFloatingBtn" class="d-none d-md-block" style="position: fixed; bottom: 20px; left: 20px; z-index: 9998; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border: none; border-radius: 50px; padding: 12px 20px; font-weight: 600; cursor: pointer; box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4); display: flex; align-items: center; gap: 8px; transition: all 0.3s ease;">
+    <button id="feedbackFloatingBtn" style="display: none; position: fixed; bottom: 20px; left: 20px; z-index: 9998; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border: none; border-radius: 50px; padding: 12px 20px; font-weight: 600; cursor: pointer; box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4); align-items: center; gap: 8px; transition: all 0.3s ease;">
         <i class="fas fa-comment-dots"></i>
         <span>Feedback</span>
     </button>
