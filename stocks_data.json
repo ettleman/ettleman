@@ -139,6 +139,20 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
+
+        .nav-paid-badge {
+            display: inline-flex;
+            align-items: center;
+            margin-left: 0.35rem;
+            padding: 0.1rem 0.35rem;
+            border-radius: 999px;
+            background: #111827;
+            color: #fbbf24;
+            font-size: 0.62rem;
+            font-weight: 800;
+            letter-spacing: 0.04em;
+            vertical-align: middle;
+        }
         
         /* Mobile Navigation Improvements */
         @media (max-width: 991px) {
@@ -1524,32 +1538,33 @@
                 </form>
                 
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
+                    <li class="nav-item d-lg-none">
                         <a class="nav-link" href="/">
                             <i class="fas fa-home d-lg-none"></i>
                             <span>Home</span>
                         </a>
                     </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="/apps/mcp/" style="color: #818cf8;">
-                            <i class="fas fa-plug d-lg-none"></i>
-                            <span><i class="fas fa-plug me-1 d-none d-lg-inline"></i>AI API</span>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="aiToolsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: #4f46e5;">
+                            <i class="fas fa-robot d-lg-none"></i>
+                            <span><i class="fas fa-robot me-1 d-none d-lg-inline"></i>AI</span>
                         </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="/apps/bottleneck-detector/" style="color: #10b981;">
-                            <i class="fas fa-crosshairs d-lg-none"></i>
-                            <span><i class="fas fa-crosshairs me-1 d-none d-lg-inline"></i>Bottleneck</span>
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="/stocks/">
-                            <i class="fas fa-search-dollar d-lg-none"></i>
-                            <span>Stock Directory</span>
-                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="aiToolsDropdown">
+                            <li><a class="dropdown-item" href="/apps/alpha-assistant/">
+                                <i class="fas fa-bolt me-2"></i>Alpha Assistant
+                                <span class="nav-paid-badge">PAID</span>
+                            </a></li>
+                            <li><a class="dropdown-item" href="/apps/investment-advisor/">
+                                <i class="fas fa-robot me-2"></i>Investment Advisor
+                            </a></li>
+                            <li><a class="dropdown-item" href="/apps/mcp/">
+                                <i class="fas fa-plug me-2"></i>AI API
+                            </a></li>
+                            <li><a class="dropdown-item" href="/apps/bottleneck-detector/">
+                                <i class="fas fa-crosshairs me-2"></i>Bottleneck Detector
+                            </a></li>
+                        </ul>
                     </li>
 
                     <!-- Market Analysis Dropdown -->
@@ -1559,12 +1574,6 @@
                             <span>Market</span>
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="marketAnalysisDropdown">
-                            <li><a class="dropdown-item" href="/apps/alpha-assistant/">
-                                <i class="fas fa-bolt me-2"></i>Alpha Assistant
-                            </a></li>
-                            <li><a class="dropdown-item" href="/apps/investment-advisor/">
-                                <i class="fas fa-robot me-2"></i>Investment Advisor
-                            </a></li>
                             <li><a class="dropdown-item" href="/apps/investment-advisor/market-pulse/">
                                 <i class="fas fa-heartbeat me-2"></i>Market Pulse
                             </a></li>
@@ -1658,6 +1667,12 @@
                             <span>Stocks</span>
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="stockToolsDropdown">
+                            <li><a class="dropdown-item" href="/stocks/">
+                                <i class="fas fa-search-dollar me-2"></i>Stock Directory
+                            </a></li>
+                            <li><a class="dropdown-item" href="/apps/scanner/">
+                                <i class="fas fa-filter me-2"></i>Stock Screener
+                            </a></li>
                             <li><a class="dropdown-item" href="/stocks/top-50-stocks-to-buy-now/">
                                 <i class="fas fa-trophy me-2" style="color: #f59e0b;"></i>Top 50 Stocks to Buy
                                 <span class="badge bg-danger ms-1">HOT</span>
@@ -1997,7 +2012,7 @@
                     </li>
                     
                     <!-- Live Trades -->
-                    <li class="nav-item">
+                    <li class="nav-item d-lg-none">
                         <a class="nav-link" href="/apps/social/groups/">
                             <i class="fas fa-bolt d-lg-none"></i>
                             <span>Live Trades</span>
@@ -2005,7 +2020,7 @@
                     </li>
                     
                     <!-- Stock Screener -->
-                    <li class="nav-item">
+                    <li class="nav-item d-lg-none">
                         <a class="nav-link" href="/apps/scanner/">
                             <i class="fas fa-filter d-lg-none"></i>
                             <span>Stock Screener</span>
@@ -2819,7 +2834,7 @@
         </div>
         <div class="mt-4">
             <p class="text-muted small">
-                If you believe this is an error, please <a href="/cdn-cgi/l/email-protection#f685838686998482b6828497929385829f93d895999b">contact support</a>.
+                If you believe this is an error, please <a href="/cdn-cgi/l/email-protection#760503060619040236020417121305021f135815191b">contact support</a>.
             </p>
         </div>
     </div>
