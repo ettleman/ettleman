@@ -1706,6 +1706,10 @@
                                 <i class="fas fa-exchange-alt me-2" style="color: #2563eb;"></i>Supply Chain Money Flow
                                 <span class="badge bg-danger ms-1">NEW</span>
                             </a></li>
+                            <li><a class="dropdown-item" href="/apps/investment-advisor/ai-token-pricing/">
+                                <i class="fas fa-coins me-2" style="color: #d97706;"></i>AI Token Pricing
+                                <span class="badge bg-danger ms-1">NEW</span>
+                            </a></li>
                             <li><a class="dropdown-item" href="/apps/investment-advisor/top-picks/">
                                 <i class="fas fa-trophy me-2" style="color: #d97706;"></i>Top 20 Stocks
                                 <span class="badge bg-danger ms-1">NEW</span>
@@ -2834,7 +2838,7 @@
         </div>
         <div class="mt-4">
             <p class="text-muted small">
-                If you believe this is an error, please <a href="/cdn-cgi/l/email-protection#f2818782829d8086b2868093969781869b97dc919d9f">contact support</a>.
+                If you believe this is an error, please <a href="/cdn-cgi/l/email-protection#a9dadcd9d9c6dbdde9dddbc8cdccdaddc0cc87cac6c4">contact support</a>.
             </p>
         </div>
     </div>
