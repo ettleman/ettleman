@@ -2838,7 +2838,7 @@
         </div>
         <div class="mt-4">
             <p class="text-muted small">
-                If you believe this is an error, please <a href="/cdn-cgi/l/email-protection#45363035352a373105313724212036312c206b262a28">contact support</a>.
+                If you believe this is an error, please <a href="/cdn-cgi/l/email-protection#5a292f2a2a35282e1a2e283b3e3f292e333f74393537">contact support</a>.
             </p>
         </div>
     </div>
@@ -2894,9 +2894,6 @@
             const desktopSearch = document.getElementById('navStockSearch');
             const mobileSearch = document.getElementById('navStockSearchMobile');
             
-            // Check authentication status (injected from Django)
-            const isUserAuthenticated = false;
-
             let ticker = '';
             if (desktopSearch && desktopSearch.value) {
                 ticker = desktopSearch.value.trim().toUpperCase();
@@ -2905,28 +2902,8 @@
             }
 
             if (ticker) {
-                if (isUserAuthenticated) {
-                    // Logged-in users: Optimized experience
-                    
-                    // 1. If already on the dashboard, trigger AJAX search directly (no reload)
-                    if (window.location.pathname.includes('/apps/investment-advisor/') && typeof searchStock === 'function') {
-                        searchStock(ticker);
-                        
-                        // Close mobile menu if open
-                        const navbarCollapse = document.getElementById('navbarNav');
-                        if (navbarCollapse.classList.contains('show')) {
-                            const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
-                            if (bsCollapse) bsCollapse.hide();
-                        }
-                    } else {
-                        // 2. If on another page, save to session and redirect to base tool
-                        sessionStorage.setItem('aiSearchTicker', ticker);
-                        window.location.href = '/apps/investment-advisor/';
-                    }
-                } else {
-                    // Guests: Go to SEO/Sales Page (Freemium Gate)
-                    window.location.href = `/stocks/${ticker}/buy-or-sell-now/`;
-                }
+                // Every nav search goes to the Investment Advisor deep link
+                window.location.href = `/apps/investment-advisor/${ticker}/`;
             } else {
                 alert('Please enter a stock ticker');
             }
